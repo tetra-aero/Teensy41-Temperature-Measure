@@ -1,7 +1,14 @@
 # Teensy41-Temperature-Measure
 By Teensy 4.1 it measure internal CPU temperature.
 
-## shell script that delete patched flag and make new patch file
+## Auto: diff and patch on every build
+- apply_patches_everytime.py
+  - platform.ini
+```
+extra_scripts = pre:apply_patches_everytime.py
+```
+
+## Manual: shell script that delete patched flag, make new patch file and patch
 ```
 ./patch/patch-debug.sh
 ```
